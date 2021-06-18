@@ -1,0 +1,34 @@
+{
+    "name": "tanyudii/laratok",
+    "description": "The REST api wrapper Tokopedia for Laravel PHP Framework.",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "tanyudii",
+            "email": "y.hertanto17@gmail.com"
+        }
+    ],
+    "require": {
+        "php": "^7.3|^8.0",
+        "illuminate/support": "^8.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "tanyudii\\Laratok\\": "src/"
+        },
+        "files": []
+    },
+    "extra": {
+        "branch-alias": {
+            "dev-master": "1.x-dev"
+        },
+        "laravel": {
+            "providers": [
+                "tanyudii\\Laratok\\LaratokServiceProvider"
+            ]
+        }
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
+}
