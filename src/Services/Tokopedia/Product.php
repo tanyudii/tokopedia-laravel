@@ -23,7 +23,7 @@ class Product extends AbstractService
             )
         );
 
-        return $response->object() ?: $response->body();
+        return $this->handleResponse($response);
     }
 
     /**
@@ -50,7 +50,7 @@ class Product extends AbstractService
             )
         );
 
-        return $response->object() ?: $response->body();
+        return $this->handleResponse($response);
     }
 
     /**
@@ -71,7 +71,7 @@ class Product extends AbstractService
             )
         );
 
-        return $response->object() ?: $response->body();
+        return $this->handleResponse($response);
     }
 
     /**
@@ -110,7 +110,7 @@ class Product extends AbstractService
             )
         );
 
-        return $response->object() ?: $response->body();
+        return $this->handleResponse($response);
     }
 
     /**
@@ -127,7 +127,7 @@ class Product extends AbstractService
             )
         );
 
-        return $response->object() ?: $response->body();
+        return $this->handleResponse($response);
     }
 
     /**
@@ -144,7 +144,7 @@ class Product extends AbstractService
             )
         );
 
-        return $response->object() ?: $response->body();
+        return $this->handleResponse($response);
     }
 
     /**
@@ -163,7 +163,7 @@ class Product extends AbstractService
             Arr::only($payload, ["products"])
         );
 
-        return $response->object() ?: $response->body();
+        return $this->handleResponse($response);
     }
 
     /**
@@ -182,7 +182,7 @@ class Product extends AbstractService
             Arr::only($payload, ["products"])
         );
 
-        return $response->object() ?: $response->body();
+        return $this->handleResponse($response);
     }
 
     /**
@@ -201,7 +201,7 @@ class Product extends AbstractService
             Arr::only($payload, ["products"])
         );
 
-        return $response->object() ?: $response->body();
+        return $this->handleResponse($response);
     }
 
     /**
@@ -220,7 +220,7 @@ class Product extends AbstractService
             Arr::only($payload, ["products"])
         );
 
-        return $response->object() ?: $response->body();
+        return $this->handleResponse($response);
     }
 
     /**
@@ -239,7 +239,7 @@ class Product extends AbstractService
             $payload
         );
 
-        return $response->object() ?: $response->body();
+        return $this->handleResponse($response);
     }
 
     /**
@@ -258,7 +258,7 @@ class Product extends AbstractService
             Arr::only($payload, ["product_id"])
         );
 
-        return $response->object() ?: $response->body();
+        return $this->handleResponse($response);
     }
 
     /**
@@ -277,7 +277,7 @@ class Product extends AbstractService
             Arr::only($payload, ["product_id"])
         );
 
-        return $response->object() ?: $response->body();
+        return $this->handleResponse($response);
     }
 
     /**
@@ -296,7 +296,7 @@ class Product extends AbstractService
             $payload
         );
 
-        return $response->object() ?: $response->body();
+        return $this->handleResponse($response);
     }
 
     /**
@@ -315,7 +315,7 @@ class Product extends AbstractService
             $payload
         );
 
-        return $response->object() ?: $response->body();
+        return $this->handleResponse($response);
     }
 
     /**
@@ -334,7 +334,7 @@ class Product extends AbstractService
             $payload
         );
 
-        return $response->object() ?: $response->body();
+        return $this->handleResponse($response);
     }
 
     /**
@@ -353,6 +353,6 @@ class Product extends AbstractService
             $payload
         );
 
-        return $response->object() ?: $response->body();
+        return $this->handleResponse($response);
     }
 }

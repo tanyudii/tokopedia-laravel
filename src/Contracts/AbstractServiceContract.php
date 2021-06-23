@@ -2,6 +2,8 @@
 
 namespace tanyudii\Laratok\Contracts;
 
+use Illuminate\Http\Client\Response;
+
 interface AbstractServiceContract
 {
     /**
@@ -40,4 +42,10 @@ interface AbstractServiceContract
      * @return mixed
      */
     public function http();
+
+    /**
+     * @param Response $response
+     * @return mixed
+     */
+    public function handleResponse(Response $response);
 }

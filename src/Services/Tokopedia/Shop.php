@@ -23,7 +23,7 @@ class Shop extends AbstractService
             )
         );
 
-        return $response->object() ?: $response->body();
+        return $this->handleResponse($response);
     }
 
     /**
@@ -47,7 +47,7 @@ class Shop extends AbstractService
             ])
         );
 
-        return $response->object() ?: $response->body();
+        return $this->handleResponse($response);
     }
 
     /**
@@ -66,7 +66,7 @@ class Shop extends AbstractService
             )
         );
 
-        return $response->object() ?: $response->body();
+        return $this->handleResponse($response);
     }
 
     /**
@@ -92,7 +92,7 @@ class Shop extends AbstractService
             )
         );
 
-        return $response->object() ?: $response->body();
+        return $this->handleResponse($response);
     }
 
     /**
@@ -111,7 +111,7 @@ class Shop extends AbstractService
             Arr::only($payload, ["name"])
         );
 
-        return $response->object() ?: $response->body();
+        return $this->handleResponse($response);
     }
 
     /**
@@ -130,7 +130,7 @@ class Shop extends AbstractService
             Arr::only($payload, ["id", "name"])
         );
 
-        return $response->object() ?: $response->body();
+        return $this->handleResponse($response);
     }
 
     /**
@@ -149,6 +149,6 @@ class Shop extends AbstractService
             Arr::only($payload, ["id"])
         );
 
-        return $response->object() ?: $response->body();
+        return $this->handleResponse($response);
     }
 }

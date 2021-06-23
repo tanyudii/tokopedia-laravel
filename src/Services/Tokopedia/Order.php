@@ -36,7 +36,7 @@ class Order extends AbstractService
             )
         );
 
-        return $response->object() ?: $response->body();
+        return $this->handleResponse($response);
     }
 
     /**
@@ -55,7 +55,7 @@ class Order extends AbstractService
             )
         );
 
-        return $response->object() ?: $response->body();
+        return $this->handleResponse($response);
     }
 
     /**
@@ -72,6 +72,6 @@ class Order extends AbstractService
             )
         );
 
-        return $response->object() ?: $response->body();
+        return $this->handleResponse($response);
     }
 }

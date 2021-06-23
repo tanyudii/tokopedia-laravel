@@ -5,6 +5,7 @@ namespace tanyudii\Laratok;
 use Illuminate\Support\ServiceProvider;
 use tanyudii\Laratok\Services\Tokopedia\Campaign;
 use tanyudii\Laratok\Services\Tokopedia\Category;
+use tanyudii\Laratok\Services\Tokopedia\Encryption;
 use tanyudii\Laratok\Services\Tokopedia\Finance;
 use tanyudii\Laratok\Services\Tokopedia\Interaction;
 use tanyudii\Laratok\Services\Tokopedia\Logistic;
@@ -58,6 +59,10 @@ class LaratokServiceProvider extends ServiceProvider
 
         $this->app->bind("laratok-category-service", function () {
             return new Category();
+        });
+
+        $this->app->bind("laratok-encryption-service", function () {
+            return new Encryption();
         });
 
         $this->app->bind("laratok-finance-service", function () {

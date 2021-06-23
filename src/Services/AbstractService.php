@@ -2,6 +2,7 @@
 
 namespace tanyudii\Laratok\Services;
 
+use Illuminate\Http\Client\Response;
 use Illuminate\Support\Facades\Http;
 use tanyudii\Laratok\Contracts\AbstractServiceContract;
 use tanyudii\Laratok\Contracts\CredentialContract;
@@ -87,5 +88,14 @@ abstract class AbstractService implements AbstractServiceContract
         return Http::withHeaders($this->getHeaders())->baseUrl(
             $this->getBaseUrl()
         );
+    }
+
+    /**
+     * @inheritdoc
+     */
+    public function handleResponse(Response $response)
+    {
+        return $response->object() ?:
+            trim(preg_replace("/\s\s+/", " ", $response->body()));
     }
 }

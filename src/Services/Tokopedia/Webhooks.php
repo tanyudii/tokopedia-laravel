@@ -16,7 +16,7 @@ class Webhooks extends AbstractService
             sprintf("/v1/fs/%s", $this->getCredential()->getFsId())
         );
 
-        return $response->object() ?: $response->body();
+        return $this->handleResponse($response);
     }
 
     /**
@@ -40,7 +40,7 @@ class Webhooks extends AbstractService
             ])
         );
 
-        return $response->object() ?: $response->body();
+        return $this->handleResponse($response);
     }
 
     /**
@@ -59,7 +59,7 @@ class Webhooks extends AbstractService
             )
         );
 
-        return $response->object() ?: $response->body();
+        return $this->handleResponse($response);
     }
 
     /**
@@ -73,6 +73,6 @@ class Webhooks extends AbstractService
             Arr::only($payload, ["order_id", "type", "url", "is_encrypted"])
         );
 
-        return $response->object() ?: $response->body();
+        return $this->handleResponse($response);
     }
 }
