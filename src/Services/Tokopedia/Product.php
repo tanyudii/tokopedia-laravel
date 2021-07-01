@@ -76,24 +76,24 @@ class Product extends AbstractService
 
     /**
      * @param $shopId
-     * @param $page
-     * @param $perPage
+     * @param $rows
+     * @param $start
      * @param array $payload
      * @return string
      */
     public function getAllActiveProducts(
         $shopId,
-        $page,
-        $perPage,
+        $rows,
+        $start,
         array $payload = []
     ) {
         $response = $this->http()->get(
             sprintf(
-                "/inventory/v1/fs/%s/product/list?shop_id=%s&rows=%s&start=%s&order_by=%s",
+                "/inventory/v1/fs/%s/product/list?shop_id=%s&rows=%s&start=%s&%s",
                 $this->getCredential()->getFsId(),
                 $shopId,
-                $page,
-                $page * $perPage,
+                $rows,
+                $start,
                 http_build_query(
                     Arr::only($payload, [
                         "order_by",

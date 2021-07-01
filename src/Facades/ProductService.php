@@ -8,7 +8,7 @@ use Illuminate\Support\Facades\Facade;
  * @method static object getProductInfoByProductIdOrUrl(array $payload = [])
  * @method static object getProductInfoFromRelatedShopId($shopId, $page, $perPage, array $payload = [])
  * @method static object getAllProductsV2($page, $perPage, array $payload = [])
- * @method static object getAllActiveProducts($shopId, $page, $perPage, array $payload = [])
+ * @method static object getAllActiveProducts($shopId, $rows, $start, array $payload = [])
  * @method static object getAllVariantsByCategory($categoryId)
  * @method static object getAllVariantsByProduct($productId)
  * @method static object createProductsV2($shopId, array $payload)
