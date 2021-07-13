@@ -7,7 +7,7 @@ use Illuminate\Support\Facades\Facade;
 /**
  * @method static object getAllCategories(array $payload = [])
  *
- * @see \tanyudii\Laratok\Services\LaratokService
+ * @see \tanyudii\Laratok\Services\Tokopedia\Category
  */
 class CategoryService extends Facade
 {

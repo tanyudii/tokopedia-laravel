@@ -9,7 +9,7 @@ use Illuminate\Support\Facades\Facade;
  * @method static bool verify()
  * @method static array decodeData(string $secret, string $content)
  *
- * @see \tanyudii\Laratok\Services\EncryptionService
+ * @see \tanyudii\Laratok\Services\Tokopedia\Encryption
  */
 class EncryptionService extends Facade
 {
