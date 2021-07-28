@@ -5,7 +5,6 @@ namespace tanyudii\Laratok\Facades;
 use Illuminate\Support\Facades\Facade;
 
 /**
- *
  * @method static object getShopInfo($shopId, array $payload = [])
  * @method static object updateShopStatus(array $payload = [])
  * @method static object getAllEtalase($shopId, array $payload = [])
