@@ -13,7 +13,7 @@ class Order extends AbstractService
      * @param $page
      * @param $perPage
      * @param array $payload
-     * @return string
+     * @return object|string
      */
     public function getAllOrders(
         $fromDate,
@@ -41,7 +41,7 @@ class Order extends AbstractService
 
     /**
      * @param array $payload
-     * @return string
+     * @return object|string
      */
     public function getSingleOrder(array $payload = [])
     {
@@ -60,7 +60,7 @@ class Order extends AbstractService
 
     /**
      * @param $orderId
-     * @return string
+     * @return object|string
      */
     public function acceptOrder($orderId)
     {

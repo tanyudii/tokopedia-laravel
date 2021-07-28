@@ -7,13 +7,12 @@ use Illuminate\Support\Facades\Config;
 use Illuminate\Support\Facades\Http;
 use Illuminate\Support\Facades\Storage;
 use tanyudii\Laratok\Services\AbstractService;
-use function base_path;
 
 class Encryption extends AbstractService
 {
     /**
      * @param bool $forceGenerate
-     * @return string
+     * @return object|string
      * @throws Exception
      */
     public function registerPublicKey(bool $forceGenerate = false)
@@ -177,7 +176,7 @@ class Encryption extends AbstractService
 
     /**
      * @param bool $forceGenerate
-     * @return void|false|string|null
+     * @return false|string|void|null
      */
     protected function generate(bool $forceGenerate = false)
     {

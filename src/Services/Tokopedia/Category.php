@@ -9,7 +9,7 @@ class Category extends AbstractService
 {
     /**
      * @param array $payload
-     * @return string
+     * @return object|string
      */
     public function getAllCategories(array $payload = [])
     {

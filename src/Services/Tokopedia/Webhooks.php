@@ -8,7 +8,7 @@ use tanyudii\Laratok\Services\AbstractService;
 class Webhooks extends AbstractService
 {
     /**
-     * @return string
+     * @return object|string
      */
     public function listRegisteredWebhooks()
     {

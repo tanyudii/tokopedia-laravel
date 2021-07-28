@@ -10,7 +10,7 @@ class Shop extends AbstractService
     /**
      * @param $shopId
      * @param array $payload
-     * @return string
+     * @return object|string
      */
     public function getShopInfo($shopId, array $payload = [])
     {
@@ -28,7 +28,7 @@ class Shop extends AbstractService
 
     /**
      * @param array $payload
-     * @return string
+     * @return object|string
      */
     public function updateShopStatus(array $payload = [])
     {
@@ -53,7 +53,7 @@ class Shop extends AbstractService
     /**
      * @param $shopId
      * @param array $payload
-     * @return string
+     * @return object|string
      */
     public function getAllEtalase($shopId, array $payload = [])
     {
@@ -72,7 +72,7 @@ class Shop extends AbstractService
     /**
      * @param $shopId
      * @param array $payload
-     * @return string
+     * @return object|string
      */
     public function getShowcaseByShopId($shopId, array $payload = [])
     {
@@ -98,7 +98,7 @@ class Shop extends AbstractService
     /**
      * @param $shopId
      * @param array $payload
-     * @return string
+     * @return object|string
      */
     public function createShowcaseByShopId($shopId, array $payload)
     {
@@ -117,7 +117,7 @@ class Shop extends AbstractService
     /**
      * @param $shopId
      * @param array $payload
-     * @return string
+     * @return object|string
      */
     public function updateShowcaseByShopId($shopId, array $payload)
     {
@@ -136,7 +136,7 @@ class Shop extends AbstractService
     /**
      * @param $shopId
      * @param array $payload
-     * @return string
+     * @return object|string
      */
     public function deleteShowcaseByShopId($shopId, array $payload)
     {

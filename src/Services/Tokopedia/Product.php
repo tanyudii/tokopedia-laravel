@@ -9,7 +9,7 @@ class Product extends AbstractService
 {
     /**
      * @param array $payload
-     * @return string
+     * @return object|string
      */
     public function getProductInfoByProductIdOrUrl(array $payload = [])
     {
@@ -31,7 +31,7 @@ class Product extends AbstractService
      * @param $page
      * @param $perPage
      * @param array $payload
-     * @return string
+     * @return object|string
      */
     public function getProductInfoFromRelatedShopId(
         $shopId,
@@ -57,7 +57,7 @@ class Product extends AbstractService
      * @param $page
      * @param $perPage
      * @param array $payload
-     * @return string
+     * @return object|string
      */
     public function getAllProductsV2($page, $perPage, array $payload = [])
     {
@@ -79,7 +79,7 @@ class Product extends AbstractService
      * @param $rows
      * @param $start
      * @param array $payload
-     * @return string
+     * @return object|string
      */
     public function getAllActiveProducts(
         $shopId,
@@ -115,7 +115,7 @@ class Product extends AbstractService
 
     /**
      * @param $categoryId
-     * @return string
+     * @return object|string
      */
     public function getAllVariantsByCategory($categoryId)
     {
@@ -132,7 +132,7 @@ class Product extends AbstractService
 
     /**
      * @param $productId
-     * @return string
+     * @return object|string
      */
     public function getAllVariantsByProduct($productId)
     {
@@ -150,7 +150,7 @@ class Product extends AbstractService
     /**
      * @param $shopId
      * @param array $payload
-     * @return string
+     * @return object|string
      */
     public function createProductsV2($shopId, array $payload)
     {
@@ -169,7 +169,7 @@ class Product extends AbstractService
     /**
      * @param $shopId
      * @param array $payload
-     * @return string
+     * @return object|string
      */
     public function createProductsV3($shopId, array $payload)
     {
@@ -188,7 +188,7 @@ class Product extends AbstractService
     /**
      * @param $shopId
      * @param array $payload
-     * @return string
+     * @return object|string
      */
     public function updateProductV2($shopId, array $payload)
     {
@@ -207,7 +207,7 @@ class Product extends AbstractService
     /**
      * @param $shopId
      * @param array $payload
-     * @return string
+     * @return object|string
      */
     public function updateProductV3($shopId, array $payload)
     {
@@ -226,7 +226,7 @@ class Product extends AbstractService
     /**
      * @param $shopId
      * @param array $payload
-     * @return string
+     * @return object|string
      */
     public function deleteProductV3($shopId, array $payload)
     {
@@ -245,7 +245,7 @@ class Product extends AbstractService
     /**
      * @param $shopId
      * @param array $payload
-     * @return string
+     * @return object|string
      */
     public function setActiveProduct($shopId, array $payload)
     {
@@ -264,7 +264,7 @@ class Product extends AbstractService
     /**
      * @param $shopId
      * @param array $payload
-     * @return string
+     * @return object|string
      */
     public function setInactiveProduct($shopId, array $payload)
     {
@@ -283,7 +283,7 @@ class Product extends AbstractService
     /**
      * @param $shopId
      * @param array $payload
-     * @return string
+     * @return object|string
      */
     public function updatePriceOnly($shopId, array $payload)
     {
@@ -302,7 +302,7 @@ class Product extends AbstractService
     /**
      * @param $shopId
      * @param array $payload
-     * @return string
+     * @return object|string
      */
     public function updateStockByOverwrite($shopId, array $payload)
     {
@@ -321,7 +321,7 @@ class Product extends AbstractService
     /**
      * @param $shopId
      * @param array $payload
-     * @return string
+     * @return object|string
      */
     public function updateStockByIncrement($shopId, array $payload)
     {
@@ -340,7 +340,7 @@ class Product extends AbstractService
     /**
      * @param $shopId
      * @param array $payload
-     * @return string
+     * @return object|string
      */
     public function updateStockByDecrement($shopId, array $payload)
     {
