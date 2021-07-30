@@ -74,4 +74,60 @@ class Order extends AbstractService
 
         return $this->handleResponse($response);
     }
+
+    /**
+     * @param $orderId
+     * @param array $payload
+     * @return object|string
+     */
+    public function rejectOrder($orderId, array $payload = [])
+    {
+        $response = $this->http()->post(
+            sprintf(
+                "/v1/order/%s/fs/%s/nack",
+                $orderId,
+                $this->getCredential()->getFsId()
+            ),
+            Arr::except($payload, ["reason_code", "reason", "shop_close_end_date", "shop_close_note"])
+        );
+
+        return $this->handleResponse($response);
+    }
+
+    /**
+     * @param $orderId
+     * @param array $payload
+     * @return object|string
+     */
+    public function updateOrderStatus($orderId, array $payload = [])
+    {
+        $response = $this->http()->post(
+            sprintf(
+                "/v1/order/%s/fs/%s/status",
+                $orderId,
+                $this->getCredential()->getFsId()
+            ),
+            Arr::except($payload, ["order_status", "shipping_ref_num"])
+        );
+
+        return $this->handleResponse($response);
+    }
+
+    /**
+     * @param $orderId
+     * @param array $payload
+     * @return object|string
+     */
+    public function requestPickUp($orderId, array $payload = [])
+    {
+        $response = $this->http()->post(
+            sprintf(
+                "/inventory/v1/fs/%s/pick-up",
+                $this->getCredential()->getFsId()
+            ),
+            Arr::except($payload, ["order_id", "shop_id"])
+        );
+
+        return $this->handleResponse($response);
+    }
 }
