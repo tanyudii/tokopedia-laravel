@@ -54,6 +54,7 @@ class Product extends AbstractService
     }
 
     /**
+     * @deprecated https://developer.tokopedia.com/openapi/guide/#/changelog [13.09.2021]
      * @param $page
      * @param $perPage
      * @param array $payload
@@ -75,6 +76,7 @@ class Product extends AbstractService
     }
 
     /**
+     * @deprecated https://developer.tokopedia.com/openapi/guide/#/changelog [13.09.2021]
      * @param $shopId
      * @param $rows
      * @param $start
