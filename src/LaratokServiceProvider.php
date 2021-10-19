@@ -39,7 +39,7 @@ class LaratokServiceProvider extends ServiceProvider
         if ($this->app->runningInConsole()) {
             $this->publishes(
                 [
-                    __DIR__ . "/../assets/laratok.php" => config_path(
+                    __DIR__ . "/../assets/laratok.php" => $this->app->configPath(
                         "laratok.php"
                     ),
                 ],
@@ -54,47 +54,47 @@ class LaratokServiceProvider extends ServiceProvider
     protected function registerTokopediaService()
     {
         $this->app->bind("laratok-campaign-service", function () {
-            return new Campaign();
+            return $this->app->make(Campaign::class);
         });
 
         $this->app->bind("laratok-category-service", function () {
-            return new Category();
+            return $this->app->make(Category::class);
         });
 
         $this->app->bind("laratok-encryption-service", function () {
-            return new Encryption();
+            return $this->app->make(Encryption::class);
         });
 
         $this->app->bind("laratok-finance-service", function () {
-            return new Finance();
+            return $this->app->make(Finance::class);
         });
 
         $this->app->bind("laratok-interaction-service", function () {
-            return new Interaction();
+            return $this->app->make(Interaction::class);
         });
 
         $this->app->bind("laratok-logistic-service", function () {
-            return new Logistic();
+            return $this->app->make(Logistic::class);
         });
 
         $this->app->bind("laratok-order-service", function () {
-            return new Order();
+            return $this->app->make(Order::class);
         });
 
         $this->app->bind("laratok-product-service", function () {
-            return new Product();
+            return $this->app->make(Product::class);
         });
 
         $this->app->bind("laratok-shop-service", function () {
-            return new Shop();
+            return $this->app->make(Shop::class);
         });
 
         $this->app->bind("laratok-statistic-service", function () {
-            return new Statistic();
+            return $this->app->make(Statistic::class);
         });
 
         $this->app->bind("laratok-webhooks-service", function () {
-            return new Webhooks();
+            return $this->app->make(Webhooks::class);
         });
     }
 }
